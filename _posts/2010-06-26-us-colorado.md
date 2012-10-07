@@ -2,7 +2,7 @@
 layout: camp
 title: Drupalcamp Colorado 2010
 categories: USA
-image: site-thumbs/2010/colorado.jpg
+image: site-thumbs/2010/colorado.png
 subdomain: colorado-2010
 ---
 Drupalcamp Colorado 2010 was an amazing event.
