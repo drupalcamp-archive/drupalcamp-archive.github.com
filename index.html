@@ -8,9 +8,9 @@ layout: page
             {% for post in site.posts %}
             <li class="span4">
               <div class="thumbnail">
-                <a href="http://{{ post.subdomain }}.{{ site.site_url }}/"><img src="images/{{ post.image }}" alt="Image of the {{ post.title }} site"></a>
+                <a href="http://{{ post.subdomain }}.{{ site.base_url }}/"><img src="images/{{ post.image }}" alt="Image of the {{ post.title }} site"></a>
                 <div class="caption">
-                  <h3><a href="http://{{ post.subdomain }}.{{ site.site_url }}/">{{ post.title }}</a></h3>
+                  <h3><a href="http://{{ post.subdomain }}.{{ site.base_url }}/">{{ post.title }}</a></h3>
                   <p>{{ post.content }}</p>
                 </div>
               </div>
