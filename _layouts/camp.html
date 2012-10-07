@@ -2,8 +2,10 @@
   <html>
     <head>
       <title>{% if page.title %} {{ page.title }} | {% endif %}Drupalcamp Archive</title>
-      <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-      <link href="css/styles.css" rel="stylesheet">
+      <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="/css/styles.css" rel="stylesheet">
+      <!-- Do a nasty meta refresh if someone does make it to this page. -->
+      <meta http-equiv="refresh" content="5;url=http://{{ page.subdomain }}.{{ site.base_url }}/">
     </head>
     <body>
       <div class="container">
@@ -12,7 +14,7 @@
             <div class="page-header">
               <h1>{{ page.title }} <small>redirecting...</small></h1>
             </div>
-            <p>Redirecting you to: <a href="http://{{ page.subdomain }}.{{ site.base_url }}/">http://{{ post.subdomain }}.{{ site.base_url }}/</a></p>
+            <p>Redirecting you to: <a href="http://{{ page.subdomain }}.{{ site.base_url }}/">http://{{ page.subdomain }}.{{ site.base_url }}/</a></p>
           </div>
         </div>
       </div>
