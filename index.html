@@ -5,7 +5,7 @@ layout: page
         <h2>Archived sites</h2>
 
         {% for post in site.posts %}
-        {% cycle 'add rows': '<div class="row-fluid"><ul class="thumbnails">', nil, nil %}}
+        {% cycle 'add rows': '<div class="row-fluid"><ul class="thumbnails">', nil, nil %}
             <li class="span4">
               <div class="thumbnail">
                 <a href="http://{{ post.subdomain }}.{{ site.base_url }}/"><img src="images/{{ post.image }}" alt="Image of the {{ post.title }} site"></a>
