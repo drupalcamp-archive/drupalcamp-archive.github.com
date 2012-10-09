@@ -1,1 +1,3 @@
-base_url: drupalcamparchive.org
+name: Drupalcamp Archive
+description: An archive of previous Drupalcamp websites.
+url: http://drupalcamp-archive.github.com
