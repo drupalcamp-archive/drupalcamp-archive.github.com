@@ -1,16 +1,25 @@
 ---
 layout: page
 ---
+<div class="row">
+  <div id="navbar" class="span3">
+    <ul class="nav nav-list affix">
+      <li class="nav-header">Site preparation</li>
+      <li class="active"><a href="#static-copies"><i class="icon-chevron-right"></i>Creating static copy</a></li>
+      <li class="nav-header">Getting added to the archive</li>
+      <li><a href="#adding"><i class="icon-chevron-right"></i>Adding your site to github</a></li>
+      <li><a href="#listing"><i class="icon-chevron-right"></i>Getting listed in the archive</a></li>
+      <li><a href="#changes"><i class="icon-chevron-right"></i>Making changes after archival</a></li>
+    </ul>
+  </div>
+  <div class="span9">
+
 <h2>Getting your site archived</h2>
-<p>It's really simple to get your site archived and listed in the Drupalcamp archive:</p>
-<ol>
-  <li>Create a static, flat HTML version of your site.</li>
-  <li>Ask us to host the site and add the site to the archive pages.</li>
-</ol>
+<p>It's really simple to get your site archived and listed in the Drupalcamp archive, it's a two step process:</p>
 
-<h3>Create a static copy of your site</h3>
+<h3 id="static-copies">Create a static copy of your site</h3>
 
-<p>There are comprehensive instructions on how to create a static copy of your existing site on Drupal.org, but the goal here is to end up with a static site contained in a folder somewhere.</p>
+<p>There are comprehensive instructions on <a href="http://drupal.org/node/27882">how to create a static copy of your existing site</a> on Drupal.org, but the goal here is to end up with a static site contained in a folder somewhere.</p>
 
 <p>Important things to note:</p>
 <ul>
@@ -22,4 +31,29 @@ layout: page
 
 <h3>Getting the site hosted and added to the archive</h3>
 
-<p>We use Github to host the sites, which they provide for free! All you need to do is add your static site to a new github repo, and then ask us to fork it, provide some extra details for the archive listing and we can add your site.</p>
+<p>We use Github to host the sites, mainly because its really easy to set up and free! All you need to do is add your static site to a new github repo, and then ask us to fork it, provide some extra details for the archive listing and we can add your site. These steps are outlined in detail below.</p>
+
+<h4 id="adding">Adding your site to github</h4>
+
+<p>Log in to or create a Github account and create a new public repo in github.</p>
+<p>Now you will need to add all your static files to that repo and push them up to Github. The top level directory of your repo should have an <code>index.html</code> file at least. You will want to push into a branch named: <code>gh-pages</code>.</p>
+<p>Additionally you will need to create an empty file at the top level of your repo called: <code>.nojekyll</code>, this will stop Github from processing your static site and ensure that all your files will be available.</p>
+<p>After a few minutes you should be able to view this site at: <code>username.github.com/reponame</code>. Verify that the site looks correct and that all the files have uploaded etc.</p>
+
+
+<h4 id="listing">Getting listed in the archive</h4>
+
+<p>As we need to ensure that sites served from our domain are secure and are correctly archived, we will fork the repo you created, and point the desired domain at our github repo.</p>
+<p>To start this process, <a href="https://github.com/drupalcamp-archive/drupalcamp-archive.github.com/issues/new">open an issue against our Drupalcamp archive repo</a> and include the following information:</p>
+<ul>
+  <li>The name of your Drupalcamp as you'd it to appear in the archive.</li>
+  <li>A link to he repository on github that you created above.</li>
+  <li>The date when the camp started, e.g. 17 September 2012.</li>
+  <li>The desired subdomain to host the archived camp site on. This should follow this syntax: <code>{region}-{year}-{month}.drupalcamparchive.org</code>, if there is likely to be only one camp in that region in that year, then you may omit the <code>{month}</code> part. E.g. <code>oxford-2012.drupalcamparchive.org</code> or <code>brighton-2012-06.drupalcamparchive.org</code>.</li>
+  <li>A small 'blurb' about the Drupalcamp for the listing page. This should be no more than 50 words. See the current archive for inspiration.</li>
+</ul>
+<p>After you've posted the issue we'll review your request and if you're site is accepted then we'll fork your repo into our account, and add you to the archive listing.</p>
+
+<h4 id="changes">Making changes after archival</h4>
+
+<p>If you discover issues with the static site then you should fork our copy of the repo and then fix then and issue a pull request and we'll review your request and take it from there.</p>
