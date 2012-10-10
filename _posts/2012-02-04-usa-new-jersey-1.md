@@ -2,7 +2,7 @@
 layout: camp
 title: Drupalcamp New Jersey 2012
 categories: USA
-image: site-thumbs/2012/new-jersey-1.png
+image: site-thumbs/2012/new-jersey-1.jpg
 subdomain: newjersey-feb-2012
 published: false
 ---
