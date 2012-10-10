@@ -1,4 +1,6 @@
 ---
 ---
 {% include bootstrap.min.css %}
+{% include bootstrap.utilities.css %}
+{% include bootstrap.navbar.css %}
 {% include overrides.css %}
